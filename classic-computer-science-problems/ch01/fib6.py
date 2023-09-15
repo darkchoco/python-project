@@ -1,10 +1,8 @@
-
-
 # from typing import Generator
 from collections.abc import Iterator
 
 # def fib6(n: int) -> Generator[int, None, None]:
-def fib6(n: int) -> Iterator:
+def fib6(n: int) -> Iterator:  # Generator type hint를 Iterator로 교체. https://stackoverflow.com/a/69412148
     yield 0  # special case
     if n > 0: yield 1  # special case
     last_val: int = 0  # initially set to fib(0)
